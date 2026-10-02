@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d120f" />
+    <meta name="description" content="Демонстрационный интерфейс операционной системы ВелиБери" />
+    <title>ВелиБери · Операционная система</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#/dashboard" aria-label="ВелиБери — главная">
+          <img src="../assets/veliberi-logo-v2.png" alt="ВелиБери" />
+          <span>операционная система</span>
+        </a>
+        <nav class="side-nav" aria-label="Основные разделы">
+          <a href="#/dashboard" data-route="dashboard"><span class="nav-icon">⌂</span><span>Главная</span></a>
+          <a href="#/rentals" data-route="rentals"><span class="nav-icon">↗</span><span>Аренды</span><b id="nav-rentals-count"></b></a>
+          <a href="#/bikes" data-route="bikes"><span class="nav-icon">◎</span><span>Велосипеды</span></a>
+          <a href="#/clients" data-route="clients"><span class="nav-icon">♙</span><span>Клиенты</span></a>
+          <a href="#/service" data-route="service"><span class="nav-icon">◇</span><span>Ремонт</span><b id="nav-service-count"></b></a>
+        </nav>
+        <div class="sidebar-card">
+          <span class="live-dot"></span>
+          <div><strong>Демо-режим</strong><small>Только тестовые данные</small></div>
+        </div>
+        <div class="sidebar-profile">
+          <div class="avatar">М</div>
+          <div><strong>Менеджер</strong><small>Тестовый профиль</small></div>
+          <button class="icon-button" aria-label="Меню профиля">•••</button>
+        </div>
+      </aside>
+
+      <div class="main-wrap">
+        <header class="topbar">
+          <button class="mobile-menu" id="mobile-menu" aria-label="Открыть меню">☰</button>
+          <div class="breadcrumbs" id="breadcrumbs"></div>
+          <div class="topbar-actions">
+            <div class="today" id="today"></div>
+            <button class="icon-button notification-button" aria-label="Уведомления"><span>◌</span><i></i></button>
+          </div>
+        </header>
+        <main id="app" tabindex="-1"></main>
+      </div>
+    </div>
+
+    <div class="toast-region" id="toast-region" aria-live="polite"></div>
+    <div class="modal-root" id="modal-root"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
