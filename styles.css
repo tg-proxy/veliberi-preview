@@ -33,7 +33,7 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 
 .hero { min-height: 780px; height: 92vh; position: relative; overflow: hidden; color: #fff; background: #0d120f; }
 .hero::before { content: ""; position: absolute; z-index: 1; top: -170px; left: -12%; width: 78%; height: 480px; pointer-events: none; background: radial-gradient(ellipse at center, rgba(49,227,61,.14), rgba(49,227,61,.035) 44%, transparent 72%); filter: blur(16px); }
-.hero__image { position: absolute; inset: 0; background: url("assets/hero-bike.png") center center / cover no-repeat; }
+.hero__image { position: absolute; inset: 0; background: url("assets/hero-bike-v2.png") center center / cover no-repeat; }
 .hero__shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8,13,10,.94) 0%, rgba(8,13,10,.76) 38%, rgba(8,13,10,.15) 72%), linear-gradient(0deg, rgba(8,13,10,.38), transparent 45%); }
 .hero__content { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: center; padding-top: 112px; }
 .eyebrow { align-self: flex-start; display: flex; align-items: center; gap: 10px; padding: 9px 14px; border: 1px solid rgba(49,227,61,.52); border-radius: 99px; color: var(--green); text-transform: uppercase; letter-spacing: .07em; font-size: 11px; font-weight: 800; }
@@ -57,6 +57,23 @@ h1 em { color: var(--green); font-style: normal; }
 .trust-strip__grid > div:first-child { padding-left: 0; }
 .trust-strip__grid strong { color: var(--green); font-size: 13px; }
 .trust-strip__grid span { font-size: 12px; color: rgba(255,255,255,.5); }
+
+.tariffs { background: #e9ebe4; }
+.tariffs__heading { margin-bottom: 48px; }
+.tariff-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--ink); }
+.tariff-card { min-width: 0; min-height: 410px; padding: 28px; border-right: 1px solid var(--ink); display: flex; flex-direction: column; background: var(--cream); }
+.tariff-card:last-child { border-right: 0; }
+.tariff-card--accent { color: #fff; background: var(--ink); }
+.tariff-card__top { display: flex; justify-content: space-between; text-transform: uppercase; letter-spacing: .1em; font-size: 10px; font-weight: 800; color: var(--muted); }
+.tariff-card--accent .tariff-card__top { color: var(--green); }
+.tariff-card h3 { margin: auto 0 18px; font-size: clamp(29px, 3vw, 42px); line-height: .95; letter-spacing: -.055em; overflow-wrap: anywhere; }
+.tariff-card p { min-height: 46px; margin: 0 0 28px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.tariff-card--accent p { color: rgba(255,255,255,.55); }
+.tariff-card__button { min-height: 62px; padding: 0 17px; display: flex; align-items: center; justify-content: space-between; border: 1px solid var(--ink); background: var(--green); color: var(--ink); font-size: 13px; font-weight: 900; letter-spacing: .025em; transition: background .2s, color .2s; }
+.tariff-card__button:hover { background: var(--ink); color: #fff; }
+.tariff-card--accent .tariff-card__button { border-color: var(--green); }
+.tariff-card--accent .tariff-card__button:hover { background: #fff; color: var(--ink); }
+.tariff-card__button span { font-size: 20px; font-weight: 500; }
 
 .section { padding: 116px 0; }
 .section-heading { display: grid; grid-template-columns: 1.35fr .65fr; gap: 80px; align-items: end; margin-bottom: 58px; }
@@ -142,6 +159,11 @@ dialog p { color: var(--muted); line-height: 1.6; font-size: 14px; }
   .section-heading { margin-bottom: 36px; }
   h2 { font-size: 43px; }
   .benefit-grid { grid-template-columns: 1fr; }
+  .tariff-grid { grid-template-columns: 1fr; }
+  .tariff-card { min-height: 305px; border-right: 0; border-bottom: 1px solid var(--ink); }
+  .tariff-card:last-child { border-bottom: 0; }
+  .tariff-card h3 { font-size: clamp(38px, 11vw, 54px); }
+  .tariff-card__button { min-height: 66px; font-size: 14px; }
   .benefit-card { min-height: 250px; border-right: 0; border-bottom: 1px solid var(--line); }
   .benefit-card:last-child { border-bottom: 0; }
   .steps li { grid-template-columns: 55px 1fr; }
