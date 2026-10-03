@@ -9,13 +9,13 @@
       content="Аренда электровелосипедов ВелиБери для курьеров. Позвоните менеджеру и подберите свободный велосипед."
     />
     <script>
-      const previewVersion = new URLSearchParams(window.location.search).get("view");
+      const previewVersion = new URLSearchParams(window.location.search).get("view") || "v3";
       if (previewVersion === "v2" || previewVersion === "v3") {
         document.documentElement.dataset.version = previewVersion.slice(1);
       }
     </script>
     <title>ВелиБери — аренда электровелосипедов</title>
-    <link rel="stylesheet" href="styles.css?v=20261003-9" />
+    <link rel="stylesheet" href="styles.css?v=20261003-11" />
   </head>
   <body>
     <header class="site-header" aria-label="Основная навигация">
